@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Logo Kreatif - Jasa Pembuatan Logo Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i {
+      font-size: 1.8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.9;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      background: linear-gradient(rgba(79, 70, 229, 0.05), transparent);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: #1e293b;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #475569;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+    }
+
+    /* Services Section */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #1e293b;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 4px;
+      background: #4f46e5;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services {
+      padding: 80px 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: #c7d2fe;
+    }
+
+    .service-card.featured {
+      border: 2px solid #4f46e5;
+      transform: scale(1.03);
+    }
+
+    .service-card.featured:hover {
+      transform: scale(1.03) translateY(-10px);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: #4f46e5;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #1e293b;
+    }
+
+    .service-card p {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 2rem;
+      color: #4f46e5;
+      font-weight: bold;
+      margin: 20px 0;
+      display: block;
+    }
+
+    .service-features {
+      list-style: none;
+      text-align: left;
+      margin: 20px 0 30px;
+    }
+
+    .service-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-features li:last-child {
+      border-bottom: none;
+    }
+
+    .service-features li i {
+      color: #10b981;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+
+    .service-button {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .service-button:hover {
+      background: #4338ca;
+    }
+
+    /* Form Section */
+    .order-section {
+      padding: 80px 0;
+      background: #f1f5f9;
+    }
+
+    .order-form {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      margin: 0 auto;
+    }
+
+    .form-section {
+      margin-bottom: 35px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .form-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .form-section h3 {
+      color: #4f46e5;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-section h3 i {
+      font-size: 1.2rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .form-control {
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      width: 100%;
+      box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Status Message */
+    #status {
+      text-align: center;
+      padding: 15px;
+      margin-top: 25px;
+      border-radius: 8px;
+      font-weight: 500;
+      display: none;
+    }
+
+    .success {
+      background-color: #d1fae5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      display: block !important;
+    }
+
+    .error {
+      background-color: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      display: block !important;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #334155;
+      width: 100%;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .order-form {
+        padding: 30px 20px;
+      }
+      
+      .service-card.featured {
+        transform: none;
+      }
+      
+      .service-card.featured:hover {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 70px 0 50px;
+      }
+      
+      .services, .order-section {
+        padding: 50px 0;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    /* Set minimum date for deadline */
+    input[type="date"] {
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <i class="fas fa-palette"></i>
+      <span>Studio Logo Kreatif</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Layanan</a>
+      <a href="#order">Pesan Logo</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="fade-in">Logo Profesional untuk Brand Anda</h1>
+    <p class="fade-in">Kami menghadirkan desain logo custom yang menarik, unik, dan sesuai dengan identitas brand Anda. Tingkatkan kesan pertama bisnis Anda dengan logo yang profesional.</p>
+    <a href="#order" class="cta-button fade-in">Pesan Logo Sekarang</a>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Paket Layanan Kami</h2>
+      <p>Pilih paket yang sesuai dengan kebutuhan bisnis Anda</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+        <h3>Logo Basic</h3>
+        <p>Solusi tepat untuk bisnis baru dengan budget terbatas</p>
+        <span class="price">Rp150.000</span>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> 2 Konsep desain logo</li>
+          <li><i class="fas fa-check"></i> 1x Revisi minor</li>
+          <li><i class="fas fa-check"></i> File format PNG & JPG</li>
+          <li><i class="fas fa-check"></i> Waktu pengerjaan 3-5 hari</li>
+        </ul>
+        <button class="service-button" onclick="selectPackage('Basic - Rp150.000')">Pilih Paket Ini</button>
+      </div>
+      
+      <div class="service-card featured fade-in">
+        <div class="service-icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h3>Logo Premium</h3>
+        <p>Pilihan terpopuler dengan kualitas premium</p>
+        <span class="price">Rp350.000</span>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> 3 Konsep desain logo unik</li>
+          <li><i class="fas fa-check"></i> Revisi hingga 3x</li>
+          <li><i class="fas fa-check"></i> File format PNG, JPG, SVG</li>
+          <li><i class="fas fa-check"></i> Hak cipta sepenuhnya</li>
+          <li><i class="fas fa-check"></i> Waktu pengerjaan 5-7 hari</li>
+        </ul>
+        <button class="service-button" onclick="selectPackage('Premium - Rp350.000')">Pilih Paket Ini</button>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3>Branding Package</h3>
+        <p>Solusi branding lengkap untuk bisnis profesional</p>
+        <span class="price">Rp750.000</span>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Semua fitur Premium</li>
+          <li><i class="fas fa-check"></i> Panduan warna brand</li>
+          <li><i class="fas fa-check"></i> Tipografi khusus brand</li>
+          <li><i class="fas fa-check"></i> Desain kartu nama</li>
+          <li><i class="fas fa-check"></i> Social media kit</li>
+          <li><i class="fas fa-check"></i> Waktu pengerjaan 7-10 hari</li>
+        </ul>
+        <button class="service-button" onclick="selectPackage('Branding Package - Rp750.000')">Pilih Paket Ini</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="order-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Form Pemesanan Logo</h2>
+      <p>Isi formulir berikut untuk memulai proses pembuatan logo Anda</p>
+    </div>
+    
+    <div class="order-form fade-in">
+      <form id="logoOrderForm" onsubmit="kirimPesanan(event)">
+        <div class="form-section">
+          <h3><i class="fas fa-user"></i> 1. Data Pemesan</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap *</label>
+              <input type="text" id="nama" class="form-control" placeholder="Nama lengkap Anda" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Aktif *</label>
+              <input type="email" id="email" class="form-control" placeholder="email@contoh.com" required />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">Nomor WhatsApp *</label>
+              <input type="text" id="whatsapp" class="form-control" placeholder="0812-3456-7890" required />
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3><i class="fas fa-store"></i> 2. Informasi Brand</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="brand">Nama Brand / Usaha *</label>
+              <input type="text" id="brand" class="form-control" placeholder="Nama brand atau usaha Anda" required />
+            </div>
+            <div class="form-group">
+              <label for="slogan">Slogan (opsional)</label>
+              <input type="text" id="slogan" class="form-control" placeholder="Slogan brand Anda" />
+            </div>
+            <div class="form-group">
+              <label for="bidang">Bidang Usaha *</label>
+              <select id="bidang" class="form-control" required>
+                <option value="">Pilih bidang usaha</option>
+                <option value="Kuliner">Kuliner & Restoran</option>
+                <option value="Fashion">Fashion & Pakaian</option>
+                <option value="Teknologi">Teknologi & IT</option>
+                <option value="Pendidikan">Pendidikan & Kursus</option>
+                <option value="Kesehatan">Kesehatan & Kecantikan</option>
+                <option value="Jasa">Jasa Profesional</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3><i class="fas fa-paint-brush"></i> 3. Konsep Logo</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="gaya">Gaya Logo *</label>
+              <select id="gaya" class="form-control" required>
+                <option value="">Pilih gaya logo</option>
+                <option value="Minimalis">Minimalis & Sederhana</option>
+                <option value="Modern">Modern & Futuristik</option>
+                <option value="Elegan">Elegan & Klasik</option>
+                <option value="Maskot">Maskot & Ilustratif</option>
+                <option value="Vintage">Vintage & Retro</option>
+                <option value="Bebas">Biarkan desainer memilih</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="warna">Warna yang Diinginkan</label>
+              <input type="text" id="warna" class="form-control" placeholder="Contoh: Biru dan emas, Merah dan putih" />
+            </div>
+            <div class="form-group">
+              <label for="referensi">Referensi Logo (opsional)</label>
+              <textarea id="referensi" class="form-control" rows="2" placeholder="Link atau deskripsi logo yang Anda sukai"></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3><i class="fas fa-box"></i> 4. Paket & Deadline</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="paket">Pilih Paket *</label>
+              <select id="paket" class="form-control" required>
+                <option value="">Pilih paket yang diinginkan</option>
+                <option value="Basic - Rp150.000">Basic - Rp150.000</option>
+                <option value="Premium - Rp350.000">Premium - Rp350.000</option>
+                <option value="Branding Package - Rp750.000">Branding Package - Rp750.000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="deadline">Deadline yang Diinginkan *</label>
+              <input type="date" id="deadline" class="form-control" required />
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3><i class="fas fa-sticky-note"></i> 5. Catatan Tambahan</h3>
+          <div class="form-grid">
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="catatan">Catatan Khusus untuk Desainer</label>
+              <textarea id="catatan" class="form-control" rows="4" placeholder="Jelaskan konsep, ide, atau pesan yang ingin disampaikan melalui logo Anda"></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i> Kirim Pesanan Logo
+        </button>
+      </form>
+      
+      <div id="status"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="fas fa-palette"></i>
+        <span>Studio Logo Kreatif</span>
+      </div>
+      <p>Menciptakan identitas visual yang kuat untuk bisnis Anda sejak 2020</p>
+      
+      <div class="footer-links">
+        <a href="#services">Layanan</a>
+        <a href="#order">Pemesanan</a>
+        <a href="mailto:info@studiologokreatif.com">Email</a>
+        <a href="https://wa.me/6281234567890">WhatsApp</a>
+        <a href="#">Portofolio</a>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2026 Studio Logo Kreatif. All rights reserved.</p>
+        <p>Jasa pembuatan logo profesional & custom sesuai brand Anda</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Set minimum date for deadline (tomorrow)
+  document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    const yyyy = tomorrow.getFullYear();
+    const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+    const dd = String(tomorrow.getDate()).padStart(2, '0');
+    
+    const minDate = `${yyyy}-${mm}-${dd}`;
+    document.getElementById('deadline').min = minDate;
+    
+    // Set default deadline to 7 days from now
+    const defaultDeadline = new Date(today);
+    defaultDeadline.setDate(defaultDeadline.getDate() + 7);
+    const defaultYYYY = defaultDeadline.getFullYear();
+    const defaultMM = String(defaultDeadline.getMonth() + 1).padStart(2, '0');
+    const defaultDD = String(defaultDeadline.getDate()).padStart(2, '0');
+    
+    document.getElementById('deadline').value = `${defaultYYYY}-${defaultMM}-${defaultDD}`;
+  });
+
+  // Function to select package from service cards
+  function selectPackage(packageName) {
+    document.getElementById('paket').value = packageName;
+    
+    // Scroll to form
+    document.getElementById('order').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+    
+    // Highlight the selected package field
+    const packageField = document.getElementById('paket');
+    packageField.focus();
+    packageField.style.borderColor = '#4f46e5';
+    packageField.style.boxShadow = '0 0 0 3px rgba(79, 70, 229, 0.2)';
+    
+    setTimeout(() => {
+      packageField.style.boxShadow = '';
+    }, 1500);
+  }
+
+  // Function to submit the order form
+  function kirimPesanan(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const nama = document.getElementById('nama').value;
+    const email = document.getElementById('email').value;
+    const whatsapp = document.getElementById('whatsapp').value;
+    const brand = document.getElementById('brand').value;
+    const paket = document.getElementById('paket').value;
+    
+    // Basic validation
+    if (!nama || !email || !whatsapp || !brand || !paket) {
+      showStatus('Harap lengkapi semua field yang wajib diisi!', 'error');
+      return;
+    }
+    
+    // Show success message
+    showStatus(`Terima kasih ${nama}! Pesanan logo untuk brand "${brand}" (Paket: ${paket}) berhasil dikirim. Kami akan menghubungi Anda via WhatsApp di ${whatsapp} dalam 1x24 jam.`, 'success');
+    
+    // In a real application, you would send this data to a server here
+    console.log('Data pesanan:', {
+      nama,
+      email,
+      whatsapp,
+      brand,
+      paket,
+      slogan: document.getElementById('slogan').value,
+      bidang: document.getElementById('bidang').value,
+      gaya: document.getElementById('gaya').value,
+      warna: document.getElementById('warna').value,
+      referensi: document.getElementById('referensi').value,
+      deadline: document.getElementById('deadline').value,
+      catatan: document.getElementById('catatan').value
+    });
+    
+    // Reset form
+    e.target.reset();
+    
+    // Reset the deadline to default
+    const today = new Date();
+    const defaultDeadline = new Date(today);
+    defaultDeadline.setDate(defaultDeadline.getDate() + 7);
+    const defaultYYYY = defaultDeadline.getFullYear();
+    const defaultMM = String(defaultDeadline.getMonth() + 1).padStart(2, '0');
+    const defaultDD = String(defaultDeadline.getDate()).padStart(2, '0');
+    
+    document.getElementById('deadline').value = `${defaultYYYY}-${defaultMM}-${defaultDD}`;
+    
+    // Scroll to status message
+    document.getElementById('status').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+
+  // Function to show status messages
+  function showStatus(message, type) {
+    const statusElement = document.getElementById('status');
+    statusElement.textContent = message;
+    statusElement.className = type;
+    
+    // Auto-hide success message after 10 seconds
+    if (type === 'success') {
+      setTimeout(() => {
+        statusElement.style.opacity = '0';
+        statusElement.style.transition = 'opacity 0.5s';
+        setTimeout(() => {
+          statusElement.className = '';
+          statusElement.style.opacity = '1';
+        }, 500);
+      }, 10000);
+    }
+  }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Add animation on scroll
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, observerOptions);
+
+  // Observe elements to animate
+  document.querySelectorAll('.service-card, .order-form').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
